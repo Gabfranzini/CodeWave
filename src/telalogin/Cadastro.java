@@ -340,6 +340,9 @@ public class Cadastro extends javax.swing.JFrame {
             stmt.setString(9, telefone);
             int i = stmt.executeUpdate();
             if(i > 0) {
+                this.dispose();
+                Menu menu = new Menu();
+                menu.setVisible(true);
             } else {
                 JOptionPane.showMessageDialog(this, "ERRO");
             }
